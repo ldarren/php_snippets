@@ -2,6 +2,18 @@ android/inapp/verifier.php
 ==========================
 - verifier in app purchase signiture
 
+itunes/inapp/verifier.php
+==========================
+- verifier in app purchase receipt
+
 inotify/notify.php
 ==================
 - listen to filesystem changes and save the file to db or a remote filesystem
+
+aws/rds/config_parameter_group/setup.html
+==========================================
+- setup rds parameter group with aws sdk
+
+gd/crop/cropper.php
+==================
+image auto tranparent trimming test project

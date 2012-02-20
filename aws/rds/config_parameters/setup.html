@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>RDS Setup</title>
+</head>
+<body>
+
+<form name="input" action="proxy.php" method="get">
+<input type="hidden" name="act" value="showGroups"/>
+<table>
+<tr><th>Show All Parameter Groups</th></tr>
+<tr><td><input type="submit" value="Show groups"/></td></tr>
+</table>
+</form>
+
+<form name="input" action="proxy.php" method="get">
+<input type="hidden" name="act" value="showParams"/>
+<table>
+<tr><th colspan="2">Show All Parameters</th></tr>
+<tr><td>Group name</td><td><input type="text" name="group"/></td></tr>
+<tr><td colspan="2"><input type="submit" value="Show params"/></td></tr>
+</table>
+</form>
+
+<form name="input" action="proxy.php" method="get">
+<input type="hidden" name="act" value="updateParams"/>
+<input type="hidden" name="ParameterName" value="log_bin_trust_function_creators"/>
+<input type="hidden" name="ApplyMethod" value="immediate"/>
+<table>
+<tr><th colspan="2">Update log_bin_trust_function_creators</th></tr>
+<tr><td>Group name</td><td><input type="text" name="group"/></td></tr>
+<tr><td>binlog value</td><td><input type="text" name="ParameterValue"/></td></tr>
+<tr><td colspan="2"><input type="submit" value="Update binlog"/></td></tr>
+</table>
+</form>
+
+<form name="input" action="proxy.php" method="get">
+<input type="hidden" name="act" value="updateParams"/>
+<table>
+<tr><th colspan="2">Update log_bin_trust_function_creators</th></tr>
+<tr><td>Group name</td><td><input type="text" name="group"/></td></tr>
+<tr><td>binlog param</td><td><input type="text" name="ParameterName" value="log_bin_trust_function_creators"/></td></tr>
+<tr><td>binlog value</td><td><input type="text" name="ParameterValue"/></td></tr>
+<tr><td>method</td><td><input type="text" name="ApplyMethod" value="immediate"/></td></tr>
+<tr><td colspan="2"><input type="submit" value="Update binlog"/></td></tr>
+</table>
+</form>
+
+<form name="input" action="proxy.php" method="get">
+<input type="hidden" name="act" value="createGroup"/>
+<table>
+<tr><th colspan="2">Create new parameter group</th></tr>
+<tr><td>Group name</td><td><input type="text" name="group"/></td></tr>
+<tr><td>Group family</td><td><input type="text" name="family" value="mysql5.5"/></td></tr>
+<tr><td>Description</td><td><input type="text" name="desc"/></td></tr>
+<tr><td>method</td><td><input type="text" name="ApplyMethod" value="immediate"/></td></tr>
+<tr><td colspan="2"><input type="submit" value="Create new group"/></td></tr>
+</table>
+</form>
+
+<form name="input" action="proxy.php" method="get">
+<input type="hidden" name="act" value="deleteinstance"/>
+<table>
+<tr><th colspan="2">Delete Instance</th></tr>
+<tr><td>Identifier</td><td><input type="text" name="name"/></td></tr>
+<tr><td>method</td><td><input type="text" name="ApplyMethod" value="immediate"/></td></tr>
+<tr><td colspan="2"><input type="submit" value="Delete"/></td></tr>
+</table>
+</form>
+
+<form name="input" action="proxy.php" method="get">
+<input type="hidden" name="act" value="updateinstance"/>
+<table>
+<tr><th colspan="2">Update Instance</th></tr>
+<tr><td>Identifier</td><td><input type="text" name="name"/></td></tr>
+<tr><td>New Parameter Group</td><td><input type="text" name="DBParameterGroupName"/></td></tr>
+<tr><td>method</td><td><input type="text" name="ApplyMethod" value="immediate"/></td></tr>
+<tr><td colspan="2"><input type="submit" value="Update"/></td></tr>
+</table>
+</form>
+
+</body>
+</html>
