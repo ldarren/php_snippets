@@ -1,0 +1,7 @@
+android/inapp/verifier.php
+==========================
+- verifier in app purchase signiture
+
+inotify/notify.php
+==================
+- listen to filesystem changes and save the file to db or a remote filesystem
